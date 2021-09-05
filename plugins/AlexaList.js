@@ -76,7 +76,7 @@ if (Config.WORKTYPE == 'private') {
             );
             if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
             await message.client.sendMessage(
-                message.jid,'*●    WhatsAlexa    ●*\n❉───────────❉\n\n' + CMD_HELP, MessageType.text,{quoted: message.data, contextInfo: { forwardingScore: 49, isForwarded: true }}
+                message.jid,'*●    Whatsdevil    ●*\n❉───────────❉\n\n' + CMD_HELP, MessageType.text,{quoted: message.data, contextInfo: { forwardingScore: 49, isForwarded: true }}
             );
         }
     }));
