@@ -19,7 +19,7 @@
 <p align="center">
     Whatsdevil is a Helper WhatsApp Bot Written By @tony mark with Baileys. whatsdevil 🥰 has a lot of Features/Commans Including Voice Chat [ AI ].
     <br>
-     <img src="https://img.shields.io/github/repo-size/Kaweeshachamodk/Stefanie?color=green&label=Repo%20total%20size&style=plastic">
+     <img src="https://img.shields.io/github/repo-size/Tornymark/whatsdevil?color=green&label=Repo%20total%20size&style=plastic">
 
 <p align="center">
 <a href="https://github.com/Kaweeshachamodk/Stefanie-/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Kaweeshachamodk/Stefanie-?color=blue&style=flat-square"></a>
