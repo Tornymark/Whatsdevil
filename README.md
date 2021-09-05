@@ -22,19 +22,19 @@
      <img src="https://img.shields.io/github/repo-size/Tornymark/whatsdevil?color=green&label=Repo%20total%20size&style=plastic">
 
 <p align="center">
-<a href="https://github.com/Kaweeshachamodk/Stefanie-/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Kaweeshachamodk/Stefanie-?color=blue&style=flat-square"></a>
-<a href="https://github.com/Kaweeshachamodk/Stefanie-/network/members"><img title="Forks" src="https://img.shields.io/github/forks/TOXIC-DEVIL/WhatsAlexa?color=pink&style=flat-square"></a>
+<a href="https://github.com/Tornymark/whatsdevil-/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Kaweeshachamodk/Stefanie-?color=blue&style=flat-square"></a>
+<a href="https://github.com/Tornymark/whatsdevil-/network/members"><img title="Forks" src="https://img.shields.io/github/forks/TOXIC-DEVIL/WhatsAlexa?color=pink&style=flat-square"></a>
 
 
 ## ⚙️ Setup ⚙️
 ```
-# bash <(curl -L rotf.lol/Kaweeshachamodk/Stefanie-)
+# bash <(curl -L rotf.lol/Tornymark/whatsdevil-)
 ```
 ```
 # pkg install git
 # pkg install nodejs
-# git clone https://github.com/Kaweeshachamodk/Stefanie-
-# cd WhatsAlexa
+# git clone https://github.com/Tornymark/whatsdevil-
+# cd  Whatsdevil
 # npm i @adiwajshing/baileys
 # npm i chalk
 # node alexa.js
@@ -72,9 +72,6 @@ You Can **[Click Here](https://github.com/Kaweeshachamodk/Stefanie-/archive/refs
 
 **Of Course** This bot works on **heroku.**
 
-### 📺 What is the language of this bot?
-
-There are **3 Languages** in this Bot - **English ( US ), Malayalam ( India ), Indonasian ( Indonasia ).** You can choose the language, **Its up to you.**
 
 ### ❗ Does our number will banned from WhatsApp by Using This Bot?
 
@@ -105,15 +102,3 @@ If you need help ask in our support group
 and we will try to help you.
 ```
     
-## 👨‍💻 Developers & Contributors 👨‍💻
-
- [![TOXIC-DEVIL](https://github.com/Kaweeshachamodk.png?size=100)](https://github.com/TOXIC-DEVIL) | [![terror-boy](https://github.com/terror-boy.png?size=100)](https://github.com/terror-boy) | [![En-Cuzier](https://github.com/En-Cuzier.png?size=100)](https://github.com/En-Cuzier) |
-----|----|----|
-[Kaweesha Chamod](https://github.com/Kaweeshachamodk)  | [terror-boy](https://github.com/terror-boy) | [En-Cuzier](https://github.com/terror-boy) |
-Author: Developer, Base, Bug Fixes, Commits, Modules | Contributor: Bug Fixes ( Minor )| Contributor: Modules |
-
-## ✨ Special Features ✨
-
-- [x] simi simi chatbot
-
-- [ ] Replika chatbot
