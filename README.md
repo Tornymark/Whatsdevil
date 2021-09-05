@@ -14,7 +14,7 @@
 
 <div align="center">
   <img src="https://telegra.ph/file/8eadd25ea94c3cb996679.jpg" width="200" height="200">
-  <h1>whatsdevil</h1>
+  <h1>Whatsdevil</h1>
 </div>
 <p align="center">
     Whatsdevil is a Helper WhatsApp Bot Written By @tony mark with Baileys. whatsdevil 🥰 has a lot of Features/Commans Including Voice Chat [ AI ].
