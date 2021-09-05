@@ -3,7 +3,7 @@
 
 
 <p align="center">
-    <a href="https://github.com/Kaweeshachamodk">
+    <a href="https://github.com/tonymark">
         <img
             src="https://readme-typing-svg.herokuapp.com?size=33&width=1000&lines=Welcome+To+whatsdevil...+Thank+You+For+Visiting...."
             alt="Typing SVG"
@@ -13,7 +13,7 @@
 
 
 <div align="center">
-  <img src="https://telegra.ph/file/db43a76abfee9e0848f63.jpg" width="200" height="200">
+  <img src="https://telegra.ph/file/8eadd25ea94c3cb996679.jpg" width="200" height="200">
   <h1>whatsdevil</h1>
 </div>
 <p align="center">
