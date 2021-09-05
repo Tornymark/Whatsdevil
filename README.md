@@ -5,7 +5,7 @@
 <p align="center">
     <a href="https://github.com/Kaweeshachamodk">
         <img
-            src="https://readme-typing-svg.herokuapp.com?size=33&width=1000&lines=Welcome+To+Stefanie...+Thank+You+For+Visiting...."
+            src="https://readme-typing-svg.herokuapp.com?size=33&width=1000&lines=Welcome+To+whatsdevil...+Thank+You+For+Visiting...."
             alt="Typing SVG"
         />
     </a>
@@ -14,10 +14,10 @@
 
 <div align="center">
   <img src="https://telegra.ph/file/2935d519d950f22aca296.jpg" width="200" height="200">
-  <h1>Stefanie</h1>
+  <h1>whatsdevil</h1>
 </div>
 <p align="center">
-    Stefanie is a Helper WhatsApp Bot Written By @Kaweesha Chamor with Baileys. Stefanie🥰 has a lot of Features/Commans Including Voice Chat [ AI ].
+    Whatsdevil is a Helper WhatsApp Bot Written By @tony mark with Baileys. whatsdevil 🥰 has a lot of Features/Commans Including Voice Chat [ AI ].
     <br>
      <img src="https://img.shields.io/github/repo-size/Kaweeshachamodk/Stefanie?color=green&label=Repo%20total%20size&style=plastic">
 
