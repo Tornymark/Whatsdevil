@@ -36,7 +36,6 @@ fs.readdirSync('./plugins/sql/').forEach(plugin => {
 });
 
 const plugindb = require('./plugins/sql/plugin');
-var OWN = { ff: '94757534153' }
 
 String.prototype.format = function () {
     var i = 0, args = arguments;
@@ -99,7 +98,7 @@ async function Alexa () {
         console.log(`${chalk.green.bold('WhatAlexa')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 
-${chalk.blue.italic('Thanks to TOXIC-DEVIL')}`);
+${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
     });
     
 
