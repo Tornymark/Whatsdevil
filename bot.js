@@ -62,7 +62,7 @@ Array.prototype.remove = function() {
 
 async function Alexa () {
     await config.DATABASE.sync();
-    var StrSes_Db = await WhatsAsenaDB.findAll({
+    var StrSes_Db = await WhatsAlexaDB.findAll({
         where: {
           info: 'StringSession'
         }
