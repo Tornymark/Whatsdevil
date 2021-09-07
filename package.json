@@ -1,14 +1,14 @@
 {
-  "name": "Whatsdevil",
+  "name": "WhatsAlexa",
   "version": "1.1.1",
   "description": "WhatsApp Bot.",
-  "main": "./Whatsdevil/bot.js",
+  "main": "./WhatsAlexa/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tornymark/whatsdevil.git"
+    "url": "git+https://github.com/TOXIC-DEVIL/WhatsAlexa.git"
   },
   "keywords": [
     "whatsapp"
@@ -17,9 +17,9 @@
   "developer": "TOXIC-DEVIL",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/Tornymark/whatsdevil/issues"
+    "url": "https://github.com/TOXIC-DEVIL/WhatsAlexa/issues"
   },
-  "homepage": "https://github.com/Tornymark/whatsdevil#readme",
+  "homepage": "https://github.com/TOXIC-DEVIL/WhatsAlexa#readme",
   "dependencies": {
     "@adiwajshing/baileys": "3.4.1",
     "@lh2020/speedtest-net": "^2.1.1",
