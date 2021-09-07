@@ -18,7 +18,7 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 
 
-const WhatsAlexaDB = config.DATABASE.define('WhatsAlexa', {
+const WhatsdevilDB = config.DATABASE.define('Whatsdevil', {
     info: {
       type: DataTypes.STRING,
       allowNull: false
@@ -61,7 +61,7 @@ Array.prototype.remove = function() {
 
 async function Alexa () {
     await config.DATABASE.sync();
-    var StrSes_Db = await WhatsAlexaDB.findAll({
+    var StrSes_Db = await WhatsdevilDB.findAll({
         where: {
           info: 'StringSession'
         }
@@ -95,10 +95,10 @@ async function Alexa () {
     })    
 
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('WhatAlexa')}
+        console.log(`${chalk.green.bold('Whatsdevil')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 
-${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
+${chalk.blue.italic('Made By')}`);
     });
     
 
@@ -417,7 +417,7 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                             await command.function(whats, match);
                         } catch (error) {
                             if (config.LANG == 'EN') {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { caption: '*『 ERROR 』*\n\n*WhatsAlexa an error has occurred!*\n_Report this error to the developer! [ TOXIC-DEVIL ]._\n\n*Error:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { caption: '*『 ERROR 』*\n\n*Whatsdevil an error has occurred!*\n_Report this error to the developer! [ TOXIC-DEVIL ]._\n\n*Error:* ```' + error + '```\n\n' });
                                 
                             } else if (config.LANG == 'ML') {
                                 await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { caption: '*『 പിശക് 』*\n\n*WhatsAlexa പിശക് സംഭവിച്ചു!*\n_ഈ പിശക് ഡെവലപ്പറെ അറിയിക്കുക! [ TOXIC-DEVIL ]._\n\n*പിശക്:* ```' + error + '```\n\n' });
