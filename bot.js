@@ -60,7 +60,7 @@ Array.prototype.remove = function() {
     return this;
 };
 
-async function whatsAsena () {
+async function Alexa () {
     await config.DATABASE.sync();
     var StrSes_Db = await WhatsAsenaDB.findAll({
         where: {
@@ -69,7 +69,7 @@ async function whatsAsena () {
     });
     
     
-    const conn = new WAConnection();
+    const conn = new WhatsAlexaDB();
     conn.version = [2, 2126, 14];
     const Session = new StringSession();
 
