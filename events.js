@@ -1,12 +1,12 @@
-let config = require('./config');
-let Commands = [];
+var config = require('./config');
+var Commands = [];
 
 function addCommand(info, func) {
 
-    let types = ['photo', 'image', 'text', 'message'];
+    var types = ['photo', 'image', 'text', 'message'];
 
     var infos = {
-        fromMe: info['fromMe'] === undefined ? false : info['fromMe'],
+        fromMe: info['fromMe'] === undefined ? true : info['fromMe'], // Or Sudo
         onlyGroup: info['onlyGroup'] === undefined ? false : info['onlyGroup'],
         onlyPinned: info['onlyPinned'] === undefined ? false : info['onlyPinned'],
         onlyPm: info['onlyPm'] === undefined ? false : info['onlyPm'],
