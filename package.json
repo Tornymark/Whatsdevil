@@ -1,8 +1,8 @@
 {
   "name": "WhatsAlexa",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "WhatsApp Bot.",
-  "main": "./WhatsAlexa/bot.js",
+  "main": "./QUEEN-ALEXA/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
