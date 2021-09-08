@@ -65,7 +65,7 @@ async function Alexa () {
     conn.version = [2, 2119, 6]
 
     await config.DATABASE.sync();
-    var StrSes_Db = await WhatsAlexaDB.findAll({
+    var StrSes_Db = await WhatsdevilDB.findAll({
         where: {
           info: 'StringSession'
         }
