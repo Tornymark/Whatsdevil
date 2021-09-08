@@ -2,7 +2,7 @@
   "name": "WhatsAlexa",
   "version": "1.2.1",
   "description": "WhatsApp Bot.",
-  "main": "./QUEEN-ALEXA/bot.js",
+  "main": "./whatsdevil/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
