@@ -11,9 +11,8 @@ async function Alexa () {
     conn.regenerateQRIntervalMs = 50000;
     
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Whatsdevil')}
-${chalk.white.italic('Made By ')}${chalk.red.bold('TOXIC DEVIL')}
-
+        console.log(`${chalk.green.bold('WhatsAlexa')}
+${chalk.white.bold('Made By ')}${chalk.red.bold('TOXIC DEVIL')}
 ${chalk.blue.italic('🔄 Loading QR CODE...')}`);
     });
     
@@ -39,5 +38,3 @@ ${chalk.blue.italic('🔄 Loading QR CODE...')}`);
 
     await conn.connect();
 }
-
-Alexa()
