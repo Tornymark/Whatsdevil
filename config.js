@@ -32,9 +32,9 @@ module.exports = {
     HANDLERS: process.env.HANDLERS === undefined ? '^[.,#]' : process.env.HANDLERS,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     BRANCH: 'master',
-    DEVELOPER: 'Kaweesha Chamod',
-    AUTHOR: 'Kaweesha Chamod',
-    GIT: 'https://github.com/Kaweeshachamodk/Stefanie_.git',
+    DEVELOPER: 'tutux',
+    AUTHOR: 'tutux',
+    GIT: 'https://github.com/Tornymark/whatsdevil.git',
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
         API_KEY: process.env.HEROKU_API_KEY === undefined ? '' : process.env.HEROKU_API_KEY,
