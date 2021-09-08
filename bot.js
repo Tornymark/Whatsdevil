@@ -18,7 +18,7 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 
 
-const WhatsAlexaDB = config.DATABASE.define('WhatsAlexa', {
+const WhatsdevilDB = config.DATABASE.define('Whatsdevil', {
     info: {
       type: DataTypes.STRING,
       allowNull: false
