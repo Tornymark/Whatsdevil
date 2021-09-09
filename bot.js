@@ -1,3 +1,11 @@
+/* Copyright (C) 2020 tutux.
+
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+
+Whatsdevil - tutux
+*/
+
 const fs = require("fs");
 const path = require("path");
 const events = require("./events");
