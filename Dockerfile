@@ -1,6 +1,6 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/Tornymark/whatsdevil /root/Whatsdevil
+RUN git clone https://github.com/Tornymark/Whatsdevil /root/Whatsdevil
 WORKDIR /root/Whatsdevil/
 ENV TZ=Europe/Istanbul
 RUN npm install supervisor -g
