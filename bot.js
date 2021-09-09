@@ -3,7 +3,7 @@
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
-Whatsdevil - tutux
+Whatsdevil - Tonymark
 */
 
 const fs = require("fs");
@@ -105,7 +105,7 @@ async function Alexa () {
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('Whatsdevil')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
-${chalk.blue.italic('Made By ')}`);
+${chalk.blue.italic('Made By Tonymark')}`);
     });
     
 
