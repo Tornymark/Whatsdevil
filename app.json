@@ -1,7 +1,7 @@
 {
-    "name": "⦁═Queen 👸 Alexa═⦁",
-    "description": "queen alexa is a Helper WhatsApp Bot Written By @TOXIC-DEVIL with Baileys. Alexa has a lot of Features/Commans Including Voice Chat [ AI ].",
-    "logo": "https://telegra.ph/file/4b978de48c417dc1f4cb1.jpg",
+    "name": "WhatsAlexa",
+    "description": "WhatsAlexa is a Helper WhatsApp Bot Written By @TOXIC-DEVIL with Baileys. Alexa has a lot of Features/Commans Including Voice Chat [ AI ].",
+    "logo": "https://i.ibb.co/KGMms2Z/Whats-Alexa.jpg",
     "keywords": ["whatsapp", "Voice", "Alexa", "WhatsAlexa", "bot", "api", "ai"],
     "repository": "https://github.com/TOXIC-DEVIL/WhatsAlexa",
     "website":   "https://toxic-devil.github.io",
@@ -12,8 +12,8 @@
             "description": "Leave blank if you don't know how to use it! Private commands can be used by this admins! SUDO; Your number must be an international number. So you should have your number after the country code. Example: 9199xxxxxxxx ( This is an Example of Indian number +91 )",
             "required": false
         },
-        "AMAZONE_SESSION": {
-            "description": "Enter the copied SESSION here ( Copied code starting with Alexa;;;eyJj & ending with 9In0= ).",
+        "Alex_SESSION": {
+            "description": "Enter the copied SESSION here ( Copied code starting with Alexa===eyJj & ending with 9In0= ).",
             "required": true
         },
         "LANGUAGE": {
@@ -29,17 +29,17 @@
         "HANDLERS": {
             "description": "Symbol used infront of a command ( Prefix ). NOTE : ONLY SYMBOL CAN BE USED, DON'T ENTER ANY OTHER LATIN WORDS / ALPHABETS, IF IT HAPPENS BOT WILL NOT WORK.",
             "required": true,
-            "value": "^[#.]"
+            "value": "^[#]"
         },
         "OWNER_NAME": {
             "description": "Enter the owner name, You must enter your name ( This name will be shown on some commands )",
             "required": false,
-            "value": "EN CUZIER"
+            "value": "TOXIC DEVIL"
         },
         "OWNER_NUMBER": {
             "description": "Enter the owner number, You must enter your number, Please don't enter the number with country code ( example : 91 for indian ) Also don't enter space & + on the number ( example : 91996132xxxx for indian ). ( This number will be shown on some commands )",
             "required": false,
-            "value": "94770828271"
+            "value": "94768826133"
         },
         "SEND_READ": {
             "description": "The bot reads the incoming messages ( only commands sent by others so privacy is not breaking there ).",
@@ -95,7 +95,7 @@
             "value": "false"
         },
         "WORK_TYPE": {
-            "description": "QUEEN ALEXA Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
+            "description": "WhatsAlexa Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
             "required": true,
             "value": "public"
         },
