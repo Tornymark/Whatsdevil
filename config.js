@@ -16,7 +16,7 @@ module.exports = {
     AUTOBIO: process.env.AUTO_BIO === undefined ? 'true' : process.env.AUTO_BIO,
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
     OWNER: process.env.OWNER_NAME === undefined ? 'Whatsdevil' : process.env.OWNER_NAME,
-    OWNERNUM: process.env.OWNER_NUMBER === undefined ? '94779529221' : process.env.OWNER_NUMBER,
+    OWNERNUM: process.env.OWNER_NUMBER === undefined ? '94768826133' : process.env.OWNER_NUMBER,
     ANTILINK: process.env.ANTI_LINK === undefined ? 'false' : process.env.ANTI_LINK,
     ALIVEMSG: process.env.ALIVE_MESSAGE === undefined ? 'default' : process.env.ALIVE_MESSAGE,
     ALIVE_LOGO: process.env.ALIVE_LOGO === undefined ? 'https://telegra.ph/file/7a8c47c246bd16d90623d.jpg' : process.env.ALIVE_LOGO,
