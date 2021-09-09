@@ -34,7 +34,7 @@ module.exports = {
     BRANCH: 'master',
     DEVELOPER: 'tutux',
     AUTHOR: 'tutux',
-    GIT: 'https://github.com/Tornymark/whatsdevil.git',
+    GIT: 'https://github.com/Tornymark/Whatsdevil',
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
         API_KEY: process.env.HEROKU_API_KEY === undefined ? '' : process.env.HEROKU_API_KEY,
