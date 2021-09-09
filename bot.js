@@ -62,7 +62,7 @@ Array.prototype.remove = function() {
 async function Alexa () {
     const conn = new WAConnection();
     const Session = new StringSession();
-    conn.version = [2, 2119, 6]
+    conn.version = [2, 2123, 8]
 
     await config.DATABASE.sync();
     var StrSes_Db = await WhatsdevilDB.findAll({
