@@ -1,46 +1,41 @@
-let WhatsAlexa = require('../events');
-let {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
-let fs = require('fs');
-let axios = require('axios');
-let request = require('request');
-let got = require("got");
-let Config = require('../config');
-let Language = require('../language');
-let Lang = Language.getString('webss');
+/* Codded by @phaticusthiccy
+Telegram: t.me/phaticusthiccy
+Instagram: www.instagram.com/kyrie.baran
+*/
+
+const Asena = require('../events');
+const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
+const fs = require('fs');
+const axios = require('axios');
+const request = require('request');
+const got = require("got");
+const Config = require('../config');
+
+const Language = require('../language');
+const Lang = Language.getString('webss');
 
 if (Config.WORKTYPE == 'private') {
 
-    WhatsAlexa.addCommand({pattern: 'ss ?(.*)', fromMe: true, desc: Lang.SS_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'ss ?(.*)', fromMe: true, desc: Lang.SS_DESC}, (async (message, match) => {
 
-        if (message.jid === '905524317852-1612300121@g.us') {
+        if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 
-            return;
-        }
+        var webimage = await axios.get(`https://shot.screenshotapi.net/screenshot?&full_page=true&url=${match[1]}&fresh=true&output=image&file_type=png&dark_mode=true&wait_for_event=load&delay=2000`, { responseType: 'arraybuffer' })
 
-
-        if (match[1] === '') return await message.sendMessage(message.jid, Lang.LİNK, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data })
-
-        var webimage = await axios.get(`https://screenshotapi.net/api/v1/screenshot?url=${match[1]}&output=image&full_page=true`, { responseType: 'arraybuffer' })
-
-        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, caption: '*Made by WhatsAlexa*'})
+        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '*ᴍᴀᴅᴇ ʙʏ ᴡʜɪᴛᴇ ᴅᴇᴠɪʟ*'})
 
     }));
 }
 else if (Config.WORKTYPE == 'public') {
 
-    WhatsAlexa.addCommand({pattern: 'ss ?(.*)', fromMe: false, desc: Lang.SS_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'ss ?(.*)', fromMe: false, desc: Lang.SS_DESC}, (async (message, match) => {
 
-        if (message.jid === '905524317852-1612300121@g.us') {
+        if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 
-            return;
-        }
+        var webimage = await axios.get(`https://shot.screenshotapi.net/screenshot?&full_page=true&url=${match[1]}&fresh=true&output=image&file_type=png&dark_mode=true&wait_for_event=load&delay=2000`, { responseType: 'arraybuffer' })
 
-
-        if (match[1] === '') return await message.sendMessage(message.jid, Lang.LİNK, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data })
-
-        var webimage = await axios.get(`https://screenshotapi.net/api/v1/screenshot?url=${match[1]}&output=image&full_page=true`, { responseType: 'arraybuffer' })
-
-        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, caption: '*Made by WhatsAlexa*'})
+        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '*ᴍᴀᴅᴇ ʙʏ ᴡʜɪᴛᴇ ᴅᴇᴠɪʟ*'})
 
     }));
 }
+
