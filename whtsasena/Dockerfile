@@ -1,10 +1,9 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/Tornymark/Whatsdevil /root/WhatsAsenaDuplicated
-WORKDIR /root/WhatsAsenaDuplicated/ 
+RUN git clone https://github.com/Tornymark/BlackPanther /root/BlackPanther
+WORKDIR /root/BlackPanther/
 ENV TZ=Europe/Istanbul
 RUN npm install supervisor -g
 RUN yarn install --no-audit
-RUN git clone https://github.com/terror-boy/White
 
 CMD ["node", "bot.js"]
