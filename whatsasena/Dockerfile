@@ -1,7 +1,7 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/Tornymark/Whatsdevil /root/Whatsdevil
-WORKDIR /root/Whatsdevil/ 
+RUN git clone https://github.com/Tornymark/Whatsdevil /root/WhatsAsenaDuplicated
+WORKDIR /rootWhatsAsenaDuplicated/ 
 ENV TZ=Europe/Istanbul
 RUN npm install supervisor -g
 RUN yarn install --no-audit
