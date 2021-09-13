@@ -73,7 +73,7 @@ module.exports = {
     BRANCH: 'master',
     DEVELOPER: 'TERROR BOY',
     AUTHOR: 'TERROR BOY',
-    GIT: 'https://github.com/terror-boy/WhiteDevil.git',
+    GIT: 'https://github.com/Tornymark/Whatsdevil',
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
         API_KEY: process.env.HEROKU_API_KEY === undefined ? '' : process.env.HEROKU_API_KEY,
