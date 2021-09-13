@@ -1,14 +1,14 @@
 {
-  "name": "Whatsdevil",
-  "version": "7.3.6",
-  "description": "WhiteDevil is the Modified Version of WhatsAsena, Made By @TERROR BOY with Baileys.",
-  "main": "./WhiteDevil/bot.js",
+  "name": "BlackPanther",
+  "version": "1.3.2",
+  "description": "WhatsAsena project - a Whatsapp userbot helping to improve your Whatsapp experience.",
+  "main": "./WhatsAsenaDuplicated/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/terror-boy/WhiteDevil.git"
+    "url": "git+https://github.com/phaticusthiccy/WhatsAsenaDuplicated.git"
   },
   "keywords": [
     "whatsapp",
@@ -17,13 +17,13 @@
     "asena",
     "WhatsAsena"
   ],
-  "author": "terror-boy",
-  "developer": "@terror-boy / @farhan-dqz",
+  "author": "AsenaDev / Yusuf Usta",
+  "developer": "AsenaDev / @phaticusthiccy",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/terror-boy/WhiteDevil/issues"
+    "url": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated/issues"
   },
-  "homepage": "https://github.com/terror-boy/WhiteDevil#readme",
+  "homepage": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated#readme",
   "dependencies": {
     "@adiwajshing/baileys": "3.5.2",
     "@lh2020/speedtest-net": "^2.1.1",
