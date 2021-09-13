@@ -48,7 +48,8 @@
 
 **You must Deploy on Heroku by clicking 'Deploy to Heroku' Button.**
 
-[![Deploy-WhatsAlexa](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Tornymark/Whatsdevil)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/terror-boy/WhiteDevil)
 
 
 ## ❔ F A Q ( Frequently Asked Questions. ) ❔
