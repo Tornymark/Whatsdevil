@@ -26,6 +26,21 @@ Asena.addCommand({ pattern: 'movie ?(.*)', fromMe: false, desc: "Shows movie inf
 	msg += 'Production : ' + json.Production + '\n\n';
 	msg += 'imdbRating : ' + json.imdbRating + '\n\n';
 	msg += 'imdbVotes  : ' + json.imdbVotes + '```';
-	msg += 'link       : ' + json.link + '\n\n*https://t.me/malayalam_rocker_s*';
+        msg += 'link       : ' + json.link + '\n\n*https://t.me/malayalam_rocker_s*';
+	await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
+}));
+
+Asena.addCommand({ pattern: 'status ?(.*)', fromMe: false, desc: "Shows status info." }, (async (message, match) => {
+	if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
+	let url = `http://www.omdbapi.com/?apikey=742b2d09&t=${match[1]}&plot=full`
+	const response = await got(url);
+	const json = JSON.parse(response.body);
+	if (json.Response != 'True') return await message.client.sendMessage(message.jid, '*Not found.*', MessageType.text, { quoted: message.data });
+	let msg = '```';
+	msg += 'Title      : *Download Your Favoriate Status Videos 👇*\n\n';
+        msg += 'Title      : ' + json.Title + '\n\n';
+	msg += 'Year       : ' + json.Year + '\n\n';
+	msg += 'Actors     : ' + json.Actors + '\n\n';
+        msg += 'link       : *https://t.me/malayalam_rockers_off*';
 	await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
 }));
