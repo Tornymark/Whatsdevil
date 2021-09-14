@@ -24,6 +24,7 @@ Asena.addCommand({pattern: 'lngcode', fromMe: false, dontAddCommandList: true}, 
 
 /*Asena.addCommand({pattern: 'dict ?(.*)', fromMe: false,  dontAddCommandList: true }, async (message, match) => {
 	if (match[1] === '') return await message.reply("Need word to translate");
+
        if (match[1].includes(';')) {
         var split = match[1].split(';');
         word = split[1];
@@ -33,6 +34,8 @@ Asena.addCommand({pattern: 'lngcode', fromMe: false, dontAddCommandList: true}, 
         word = match[1];
         langcode = 'en_US';
         }
+
+
        const url = `https://api.dictionaryapi.dev/api/v2/entries/${langcode}/${word}`;
 	try {
 		const response = await got(url);
@@ -62,7 +65,9 @@ Asena.addCommand({pattern: 'lngcode', fromMe: false, dontAddCommandList: true}, 
 
 
 /*Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
+
     if (!match[1]) return await message.sendMessage(errorMessage("Need word"))
+
  if (match[1].includes(';')) {
         var split = match[1].split(';');
         word = split[1];
@@ -72,8 +77,11 @@ Asena.addCommand({pattern: 'lngcode', fromMe: false, dontAddCommandList: true}, 
         word = match[1];
         langcode = 'en_US';
         }
+
     await message.sendMessage(infoMessage("Loading"))
+
 	
+
    for (var i = 0; i < 5 ; i++) {
 	  
     await axios
@@ -83,6 +91,7 @@ Asena.addCommand({pattern: 'lngcode', fromMe: false, dontAddCommandList: true}, 
          definition,
 	example,	
         } = response.data[i].meanings[i].definitions[i]
+
    
 	
 	const msg = `
@@ -92,6 +101,7 @@ Asena.addCommand({pattern: 'lngcode', fromMe: false, dontAddCommandList: true}, 
 	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
           quoted: message.data,
         })
+
      })
       .catch(
         async (err) => await message.sendMessage(""),
