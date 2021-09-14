@@ -1,9 +1,6 @@
-/* Copyright (C) 2021 TERROR BOY
-
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-
-WhiteDevil- terror-boy
+/* Copyright (C) 2020 Yusuf Usta.
+recodded by afnanplk  
+PINKY V2
 */
 
 const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
@@ -24,7 +21,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-Asena.addCommand({pattern: 'kick ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
+Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
