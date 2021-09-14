@@ -1,8 +1,6 @@
-/* Copyright (C) 2021 TERROR BOY.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-WhiteDevil - TERROR BOY
-
+/* Copyright (C) 2020 Yusuf Usnta.
+RECODDED BY TERROR BOY
+KTB  
 */
 
 const fs = require("fs");
@@ -10,12 +8,12 @@ const path = require("path");
 const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
-const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
+const {WAConnection, MessageType, Presence} = require('@adiwajshing/baileys');
 const {Message, StringSession, Image, Video} = require('./whatsasena/');
 const { DataTypes } = require('sequelize');
 const { getMessage } = require("./plugins/sql/greetings");
-const axios = require('axios');
 const got = require('got');
+const axios = require('axios');
 
 // Sql
 const WhatsAsenaDB = config.DATABASE.define('WhatsAsena', {
@@ -69,7 +67,7 @@ async function whatsAsena () {
     
     
     const conn = new WAConnection();
-    conn.version = [2, 2126, 14];
+    conn.version = [2,2121,7];
     const Session = new StringSession();
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
@@ -98,7 +96,8 @@ async function whatsAsena () {
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
-${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
+
+${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
     });
     
 
@@ -124,7 +123,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         });
 
         console.log(
-            chalk.blueBright.italic('⬇️Installing plugins...')
+            chalk.blueBright.italic('⬇️  Installing plugins...')
         );
 
         fs.readdirSync('./plugins').forEach(plugin => {
@@ -134,189 +133,26 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         });
 
         console.log(
-            chalk.green.bold('✅ WHITE DEVIL working!')
+            chalk.green.bold('DXTROX V_1 is working perfectly 💘')
        );
         
          if (config.LANG == 'EN') {
-             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/Whitedevil.png"), MessageType.image, { caption: `『 Whitedevil』\n\nHello ${conn.user.name}!\n\n*🆘 General Help For You! 🆘*\n\n🔹 *#alive:* Check if the bot is running.\n\n🔹 *#list:* Shows the complete list of commands.\n\n🔹 *#restart:* It Restarts the bot.\n\n🔹 *#shutdown:* It Shutdown/Turn off the bot.\n\n *⚠ Warning, If you shutdown/turn off, there is no command to turn on the bot So You must got to heroku & turn on the worker. ⚠*.\n\nThank You For Using Whitedevil 💖`});
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/DXTROX.jpg"), MessageType.image, { caption: `『 DXTROX V_1 』\n\nHello ${conn.user.name}!\n\n*🆘 General Help For You! 🆘*\n\n🔹 *#alive:* Check if the bot is running.\n\n🔹 *#list:* Shows the complete list of commands.\n\n🔹 *#restart:* It Restarts the bot.\n\n🔹 *#shutdown:* It Shutdown/Turn off the bot.\n\n *⚠ Warning, If you shutdown/turn off, there is no command to turn on the bot So You must got to heroku & turn on the worker. ⚠*.\n\nThank You For Using DXTROX V_1 💖`});
              
          } else if (config.LANG == 'ID') {
-             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/Whitedevil.png"), MessageType.image, { caption: `『 Whitedevil 』\n\nHalo ${conn.user.name}!\n\n*🆘 Bantuan umum 🆘*\n\n🔹 *#alive:* Periksa apakah bot sedang berjalan.\n\n🔹 *#list:* Menampilkan daftar lengkap perintah.\n\n🔹 *#restart:* Ini me-restart bot.\n\n🔹 *#shutdown:* Ini Matikan/Matikan bot.\n\n *⚠ Peringatan, Jika Anda mematikan/mematikan, tidak ada perintah untuk menghidupkan bot Jadi Anda harus pergi ke heroku & Nyalakan worker. ⚠*.\n\nTerima Kasih Telah Menggunakan Whitedevil 💖`});
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/DXTROX.jpg"), MessageType.image, { caption: `『 DXTROX V_1 』\n\nHalo ${conn.user.name}!\n\n*🆘 Bantuan umum 🆘*\n\n🔹 *#alive:* Periksa apakah bot sedang berjalan.\n\n🔹 *#list:* Menampilkan daftar lengkap perintah.\n\n🔹 *#restart:* Ini me-restart bot.\n\n🔹 *#shutdown:* Ini Matikan/Matikan bot.\n\n *⚠ Peringatan, Jika Anda mematikan/mematikan, tidak ada perintah untuk menghidupkan bot Jadi Anda harus pergi ke heroku & Nyalakan worker. ⚠*.\n\nTerima Kasih Telah Menggunakan DXTROX V_1 💖`});
              
          } else {
-             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/Whitedevil.png"), MessageType.image, { caption: `『 Whitedevil 』\n\n *ഹലോ*  ${conn.user.name}!\n\n*🆘 പൊതുവായ സഹായം 🆘*\n\n🔹 *#alive:* ബോട്ട് പ്രവർത്തിക്കുന്നുണ്ടോയെന്ന് പരിശോധിക്കുന്നു.\n\n🔹 *#list:* കമാൻഡുകളുടെ പൂർണ്ണ ലിസ്റ്റ് കാണിക്കുന്നു.\n\n🔹 *#restart:* ഇത് ബോട്ടിനെ പുനരാരംഭിപ്പിക്കുന്നു.\n\n🔹 *#shutdown:* ഇത് ഷട്ട്ഡൗൺ/ബോട്ട് ഓഫ് ചെയ്യുന്നു.\n\n *⚠ മുന്നറിയിപ്പ്, നിങ്ങൾ ഷട്ട്ഡൗൺ/ഓഫ് ചെയ്യുകയാണെങ്കിൽ, ബോട്ട് ഓണാക്കാൻ ഒരു കമാൻഡും ഇല്ല അതിനാൽ നിങ്ങൾ Heroku ഇല്പോയി worker ഓൺ ചെയ്യണം ⚠*.\n\nWhitedevil ഉപയോഗിച്ചതിന് നന്ദി 💖`});
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/DXTROX.jpg"), MessageType.image, { caption: `『 DXTROX V_1 』\n\n *ഹലോ*  ${conn.user.name}!\n\n*🆘 പൊതുവായ സഹായം 🆘*\n\n🔹 *#alive:* ബോട്ട് പ്രവർത്തിക്കുന്നുണ്ടോയെന്ന് പരിശോധിക്കുന്നു.\n\n🔹 *#list:* കമാൻഡുകളുടെ പൂർണ്ണ ലിസ്റ്റ് കാണിക്കുന്നു.\n\n🔹 *#restart:* ഇത് ബോട്ടിനെ പുനരാരംഭിപ്പിക്കുന്നു.\n\n🔹 *#shutdown:* ഇത് ഷട്ട്ഡൗൺ/ബോട്ട് ഓഫ് ചെയ്യുന്നു.\n\n *⚠ മുന്നറിയിപ്പ്, നിങ്ങൾ ഷട്ട്ഡൗൺ/ഓഫ് ചെയ്യുകയാണെങ്കിൽ, ബോട്ട് ഓണാക്കാൻ ഒരു കമാൻഡും ഇല്ല അതിനാൽ നിങ്ങൾ Heroku ഇല്പോയി worker ഓൺ ചെയ്യണം ⚠*.\n\nDXTROX V_1 ഉപയോഗിച്ചതിന് നന്ദി 💖`});
         }
      });
     
-    /* credit:- Toxic-Devil
-    */
-    setInterval(async () => { 
-        if (config.AUTOBIO == 'true') {
-            if (conn.user.jid.startsWith('90')) { 
-                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('994')) { 
-                var ov_time = new Date().toLocaleString('AZ', { timeZone: 'Asia/Baku' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('94')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('351')) { 
-                var ov_time = new Date().toLocaleString('PT', { timeZone: 'Europe/Lisbon' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('75')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('RU', { timeZone: 'Europe/Kaliningrad' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('91')) { 
-                var ov_time = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('62')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('ID', { timeZone: 'Asia/Jakarta' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('49')) { 
-                var ov_time = new Date().toLocaleString('DE', { timeZone: 'Europe/Berlin' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('61')) {  
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('AU', { timeZone: 'Australia/Lord_Howe' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('55')) { 
-                var ov_time = new Date().toLocaleString('BR', { timeZone: 'America/Noronha' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('33')) {
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('FR', { timeZone: 'Europe/Paris' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('34')) { 
-                var ov_time = new Date().toLocaleString('ES', { timeZone: 'Europe/Madrid' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('44')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('GB', { timeZone: 'Europe/London' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('39')) {  
-                var ov_time = new Date().toLocaleString('IT', { timeZone: 'Europe/Rome' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('7')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('KZ', { timeZone: 'Asia/Almaty' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('998')) {  
-                var ov_time = new Date().toLocaleString('UZ', { timeZone: 'Asia/Samarkand' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('993')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('TM', { timeZone: 'Asia/Ashgabat' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-            else {
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('EN', { timeZone: 'America/New_York' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Whitedevil'
-                await conn.setStatus(biography)
-            }
-        }
-    }, 7890);
-    
-    setInterval(async () => { 
-        var getGMTh = new Date().getHours()
-        var getGMTm = new Date().getMinutes()
-         
-        while (getGMTh == 19 && getGMTm == 1) {
-            var announce = ''
-            if (config.LANG == 'EN') announce = '📢 Announcement system is now been added to Whitedevil!! 🥳\nDaily We ( the developers ) will announce *events/features/something new* from this system 📝\nStay Connected ✅'
-            if (config.LANG == 'ML') announce = '📢 പ്രഖ്യാപന സംവിധാനം ഇപ്പോൾ Whitedevil- ൽ ചേർത്തിരിക്കുന്നു !! 🥳\nഎല്ലാ ദിവസവും ഞങ്ങൾ ( ഡവലപ്പർമാർ ) ഈ സിസ്റ്റത്തിൽ നിന്ന് *ഇവന്റുകൾ/സവിശേഷതകൾ/പുതിയ എന്തെങ്കിലും* പ്രഖ്യാപിക്കും 📝\nകണക്റ്റഡ് ആയി തുടരുക ✅'
-            if (config.LANG == 'ID') announce = '📢 Sistem pengumuman sekarang ditambahkan ke Whitedevil !! 🥳\nHarian Kami ( pengembang ) akan mengumumkan *acara/fitur/sesuatu yang baru* dari sistem ini 📝\nTetap Terhubung ✅'
-            
-            let video = 'https://imgur.com/u9LLLGV.mp4'
-            let image = 'https://i.imgur.com/kB30S41.jpg'
-            
-            if (video.includes('http') || video.includes('https')) {
-                var VID = video.split('youtu.be')[1].split(' ')[0].replace('/', '')
-                var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['1080p','720p', '480p', '360p', '240p', '144p'].map(() => true)});
-                yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
-                yt.on('end', async () => {
-                    return await conn.sendMessage(conn.user.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {caption: announce, mimetype: Mimetype.mp4});
-                });
-            } else {
-                if (image.includes('http') || image.includes('https')) {
-                    var imagegen = await axios.get(image, { responseType: 'arraybuffer'})
-                    return await conn.sendMessage(conn.user.jid, Buffer.from(imagegen.data), MessageType.image, { caption: announce })
-                } else {
-                    return await conn.sendMessage(conn.user.jid, announce, MessageType.text)
-                }
-            }
-        }
-    }, 50000);
-    
-     conn.on('chat-update', async m => {
+    conn.on('chat-update', async m => {
         if (!m.hasNewMessage) return;
         if (!m.messages && !m.count) return;
         let msg = m.messages.all()[0];
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
+
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
@@ -425,13 +261,13 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
                             await command.function(whats, match);
                         } catch (error) {
                             if (config.LANG == 'EN') {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/Whitedevil.png"), MessageType.image, { caption: '*『 ERROR 』*\n\n*Whitedevil an error has occurred!*\n_Report this error to the developer! [ TERROR BOY ]._\n\n*Error:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/DXTROX.jpg"), MessageType.image, { caption: '*『 ERROR 』*\n\n*DXTROX V_1 an error has occurred!*\n_Report this error to the developer! [ AMAL-DX ]._\n\n*Error:* ```' + error + '```\n\n' });
                                 
                             } else if (config.LANG == 'ML') {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/Whitedevil.png"), MessageType.image, { caption: '*『 ERROR 』*\n\n*Whitedevil error സംഭവിച്ചു!*\n_ഈ error  ഡെവലപ്പറെ അറിയിക്കുക! [ TERROR BOY ]._\n\n*error:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/DXTROX.jpg"), MessageType.image, { caption: '*『 ERROR 』*\n\n*DXTROX V_1 error സംഭവിച്ചു!*\n_ഈ error  ഡെവലപ്പറെ അറിയിക്കുക! [ AMAL-DX ]._\n\n*error:* ```' + error + '```\n\n' });
                                 
                             } else {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/Whitedevil.png"), MessageType.image, { caption: '*『 KESALAHAN 』*\n\n*Whitedevil telah terjadi kesalahan!*\n_Laporkan kesalahan ini ke pengembang [ TERROR BOY ]._\n\n*Kesalahan:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/DXTROX.jpg"), MessageType.image, { caption: '*『 KESALAHAN 』*\n\n*DXTROX V_1 telah terjadi kesalahan!*\n_Laporkan kesalahan ini ke pengembang [ AMAL-DX ]._\n\n*Kesalahan:* ```' + error + '```\n\n' });
                             }
                         }
                     }
