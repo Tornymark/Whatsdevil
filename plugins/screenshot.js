@@ -1,18 +1,17 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy
-Instagram: www.instagram.com/kyrie.baran
+/* CODED BY KARTHIK_TERROR-BOY
 */
 
-const Asena = require('../events');
-const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
-const fs = require('fs');
-const axios = require('axios');
-const request = require('request');
-const got = require("got");
-const Config = require('../config');
+let Asena = require('../events');
+let {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
+let fs = require('fs');
+let axios = require('axios');
+let request = require('request');
+let got = require("got");
+let Config = require('../config');
 
-const Language = require('../language');
-const Lang = Language.getString('webss');
+let Language = require('../language');
+let Lang = Language.getString('webss');
+let tdc = '*ᴍᴀᴅᴇ ʙʏ ᴡʜɪᴛᴇ ᴅᴇᴠɪʟ*'
 
 if (Config.WORKTYPE == 'private') {
 
@@ -22,7 +21,7 @@ if (Config.WORKTYPE == 'private') {
 
         var webimage = await axios.get(`https://shot.screenshotapi.net/screenshot?&full_page=true&url=${match[1]}&fresh=true&output=image&file_type=png&dark_mode=true&wait_for_event=load&delay=2000`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '*ᴍᴀᴅᴇ ʙʏ ᴡʜɪᴛᴇ ᴅᴇᴠɪʟ*'})
+        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: tdc})
 
     }));
 }
@@ -34,7 +33,7 @@ else if (Config.WORKTYPE == 'public') {
 
         var webimage = await axios.get(`https://shot.screenshotapi.net/screenshot?&full_page=true&url=${match[1]}&fresh=true&output=image&file_type=png&dark_mode=true&wait_for_event=load&delay=2000`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '*ᴍᴀᴅᴇ ʙʏ ᴡʜɪᴛᴇ ᴅᴇᴠɪʟ*'})
+        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: tdc})
 
     }));
 }
