@@ -1,6 +1,8 @@
 /* Copyright (C) 2021 Karthik_terror-boy.
+
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
+
 WhiteDevil - Karthik_terror-boy
 */
 
@@ -13,7 +15,7 @@ async function whatsAsena() {
   conn.version = [2, 2126, 14]
 
   conn.on('connecting', async () => {
-    console.log(`${chalk.green.bold('Amal-dx ')}${chalk.green.bold('-DXTROX_V1')}
+    console.log(`${chalk.green.bold('Karthik_terror-boy ')}${chalk.green.bold('-WhiteDevil')}
 ${chalk.white.italic('AsenaString code recipient')}
 ${chalk.blue.bold('ℹ️  Connecting WhiteDevil... Please wait.')}`);
   });
@@ -37,13 +39,13 @@ ${chalk.blue.bold('ℹ️  Connecting WhiteDevil... Please wait.')}`);
     if (conn.user.jid.startsWith('91')) {
       await conn.sendMessage(
         conn.user.jid,
-        '*~___________~* *'+ conn.user.name + ' ~___________~*\n\n*▪️ DXTROX_V1 Successfully Scanned✅️*\n*▪️Thanks For Choosing DXTROX_V1 💞*',
+        '*~___________~* *'+ conn.user.name + ' ~___________~*\n\n*▪️ WhiteDevil Successfully Scanned✅️*\n*▪️Thanks For Choosing WhiteDevil 💞*',
         MessageType.text
       );
     } else {
       await conn.sendMessage(
         conn.user.jid,
-        '*~_____________~* *'+ conn.user.name + ' ~_____________~*\n\n*▪️ DXTROX_V1 Successfully Scanned✅️*\n*▪️Thanks For Choosing DXTROX_V1 💞*',
+        '*~_____________~* *'+ conn.user.name + ' ~_____________~*\n\n*▪️ WhiteDevil Successfully Scanned✅️*\n*▪️Thanks For Choosing WhiteDevil 💞*',
         MessageType.text
       );
     }
