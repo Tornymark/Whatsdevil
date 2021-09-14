@@ -312,11 +312,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         }
     }, 50000);
     
-     conn.on('chat-update', async m => {
+    conn.on('chat-update', async m => {
         if (!m.hasNewMessage) return;
         if (!m.messages && !m.count) return;
         let msg = m.messages.all()[0];
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
+
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
