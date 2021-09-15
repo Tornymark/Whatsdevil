@@ -40,7 +40,7 @@
 # node alexa.js
 ```
   
-## 💫 Deploy & Run Stefanie 💫
+## 💫 Deploy & Run Whatsdevil 💫
 
 **If You are Lazy to Download Termux or Concerned About Memory leaks, You can Use Below Button 'Run on Replit' to scan QR Code, Also Laptop/Computer is More Confortable To Scan the QR Code.**
 
