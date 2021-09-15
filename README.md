@@ -40,9 +40,6 @@
 # node alexa.js
 ```
   
-## 💫 Deploy & Run Whatsdevil 💫
-
-**If You are Lazy to Download Termux or Concerned About Memory leaks, You can Use Below Button 'Run on Replit' to scan QR Code, Also Laptop/Computer is More Confortable To Scan the QR Code.**
 
 [![Run on Repl.it](https://repl.it/badge/github.com/Tornymark/whatsdevil-)](https://replit.com/@TOXICDEVIL/WhatsAlexa)
 
@@ -66,10 +63,6 @@ If you are concerned about security, you can install it on your own computer. If
 
 **Of course not.** It will never happen. 
 
-### 📃 How Can I Download the Bot Script?
-
-You Can **[Click Here](https://github.com/Kaweeshachamodk/Stefanie-/archive/refs/heads/master.zip)** To Download The **Bot Script**.. This Script is Free, So **Don't Sell This Script in High Price.**
-
 ### ⚙ Is this a Heroku bot?
 
 **Of Course** This bot works on **heroku.**
@@ -79,9 +72,7 @@ You Can **[Click Here](https://github.com/Kaweeshachamodk/Stefanie-/archive/refs
 
 If you are concerned about that, Then you can just use bot on a [Fake Number](https://youtu.be/v8lGcQp0RjQ). **[Also Read This](https://github.com/Kaweeshachamodk/Stefanie-#-warnings--disclaimers-)**
 
-### 🔄 Can I Edit this bot?
 
-**As per the license, You Can** But We Will Not Support. 🙃
 
 ### ❔ How many features/commands are there in this bot?
 
