@@ -1,4 +1,4 @@
-## 🤔 What is whatsdevil?! 🤔
+## 🤔 What is Whatsdevil?! 🤔
 - **Whtsdevil** is a Helper WhatsApp Bot Written with **[Baileys](https://github.com/adiwajshing/baileys)** Which is hosted on **[Heroku Cloud Server](https://heroku.com).** Also Stefanie has a **Lot of Commands/Features,** Including **Artificial Intelligence [ AI ] Features/Commands.**
 
 
