@@ -261,13 +261,13 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                             await command.function(whats, match);
                         } catch (error) {
                             if (config.LANG == 'EN') {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/Whatsdevil.jpg"), MessageType.image, { caption: '*『 ERROR 』*\n\n*WWHATSDEVIL V_1 an error has occurred!*\n_Report this error to the developer! [ TONY-MARK ]._\n\n*Error:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/Devil.jpg"), MessageType.image, { caption: '*『 ERROR 』*\n\n*WWHATSDEVIL V_1 an error has occurred!*\n_Report this error to the developer! [ TONY-MARK ]._\n\n*Error:* ```' + error + '```\n\n' });
                                 
                             } else if (config.LANG == 'ML') {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/Whatsdevil.jpg"), MessageType.image, { caption: '*『 ERROR 』*\n\n*WWHATSDEVIL V_1 error സംഭവിച്ചു!*\n_ഈ error  ഡെവലപ്പറെ അറിയിക്കുക! [ TTONY-MARK ]._\n\n*error:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/Devil.jpg"), MessageType.image, { caption: '*『 ERROR 』*\n\n*WWHATSDEVIL V_1 error സംഭവിച്ചു!*\n_ഈ error  ഡെവലപ്പറെ അറിയിക്കുക! [ TTONY-MARK ]._\n\n*error:* ```' + error + '```\n\n' });
                                 
                             } else {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/Whatsdevil.jpg"), MessageType.image, { caption: '*『 KESALAHAN 』*\n\n*WHATSDEVIL V_1 telah terjadi kesalahan!*\n_Laporkan kesalahan ini ke pengembang [ TONY-MARK ]._\n\n*Kesalahan:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/Devil.jpg"), MessageType.image, { caption: '*『 KESALAHAN 』*\n\n*WHATSDEVIL V_1 telah terjadi kesalahan!*\n_Laporkan kesalahan ini ke pengembang [ TONY-MARK ]._\n\n*Kesalahan:* ```' + error + '```\n\n' });
                             }
                         }
                     }
