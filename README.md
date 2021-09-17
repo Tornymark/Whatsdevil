@@ -13,7 +13,7 @@
 
 
 <div align="center">
-  <img src="https://telegra.ph/file/8eadd25ea94c3cb996679.jpg" width="200" height="200">
+  <img src="https://telegra.ph/file/9c4c62d1ef1b5acc98702.jpg" width="270" height="270">
   <h1>Whatsdevil</h1>
 </div>
 <p align="center">
